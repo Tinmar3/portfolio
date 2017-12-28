@@ -5,6 +5,7 @@ header {
     -webkit-box-shadow: 0 3px 5px rgba(253, 125, 87, 0.3);
     -moz-box-shadow: 0 3px 5px rgba(253, 125, 87, 0.3);
     box-shadow: 0 3px 5px rgba(253, 125, 87, 0.3);
+    z-index: 10;
     @at-root .menu-content {
         @include transition(0.35, ease-in-out);
         background-color: $secondary-color;
@@ -26,6 +27,7 @@ header {
         position: relative;
     }
     .navigation-list {
+        letter-spacing: 2px;
         .navigation-link {
             color: $main-color;
             padding: 7px 0;
@@ -84,6 +86,18 @@ header {
             }
         }
     }
+    .social-list {
+        @include flex-center-horizontal();
+        margin-top: 40px;
+        .social-icon {
+            color: $main-color;
+            margin-right: 20px;
+            font-size: 30px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 // mobile first
@@ -91,6 +105,54 @@ header {
 
 @media (min-width: 768px) {}
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    header {
+        @at-root .menu-content {
+            background-color: transparent;
+            color: $secondary-color;
+            position: static;
+            top: auto;
+            right: auto;
+            width: auto;
+            height: auto;
+            padding: 0;
+        }
+        .mobile-menu-icon-wrapper {
+            display: none;
+        }
+        .navigation-list {
+            .navigation-item {
+                float: left;
+                margin-right: 25px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            .navigation-link {
+                color: $secondary-color;
+            }
+        }
+        .menu-content {
+            margin-left: auto;
+        }
+        nav {
+            float: left;
+        }
+        .social-list {
+            @include flex-center-horizontal();
+            margin-top: 0;
+            margin-left: 60px;
+            float: left;
+            .social-icon {
+                color: $secondary-color;
+                margin-right: 20px;
+                font-size: 30px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 1200px) {}

@@ -1,21 +1,36 @@
 .text {
+    font-family: $font-secondary;
     color: $secondary-color;
+}
+
+.secondary-text {
+    font-family: $font-secondary;
+    color: $main-color;
+}
+
+.neutral-text {
+    color: $text-color;
+    font-family: $font-secondary;
 }
 
 .link {
     color: $secondary-color;
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 20px;
+    &.h3-one {
+        margin-bottom: 20px;
+    }
 }
 
 // mobile first
+@media (min-width: 450px) {}
 
-@media (min-width: 450px) {
-}
-
-@media (min-width: 768px) {
-}
+@media (min-width: 768px) {}
 
 @media (min-width: 992px) {
 }
 
-@media (min-width: 1200px) {
-}
+@media (min-width: 1200px) {}

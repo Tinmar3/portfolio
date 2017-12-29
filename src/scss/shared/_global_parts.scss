@@ -228,7 +228,7 @@ $grid-width-half: 470px;
     transition: all 0.3s ease;
 }
 
-%overflow-hack {
+@mixin overflow-hack() {
     &:before,
     &:after {
         content: ".";

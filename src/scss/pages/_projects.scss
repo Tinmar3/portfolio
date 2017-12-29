@@ -1,0 +1,124 @@
+.projects {
+    @at-root .project-image-container {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    @at-root .project-desktop-image {
+        width: 98%;
+        width: calc(100% - 4px);
+        height: 100%;
+        border-radius: 4px;
+        padding: 2px;
+        .salvus & {
+            background-color: $project-1-color;
+        }
+        .duadvisor & {
+            background-color: $project-6-color;
+        }
+        .jbc & {
+            background-color: $text-color;
+        }
+        .smart-sense & {
+            background-color: $project-2-color;
+        }
+        .smart-net & {
+            background-color: $project-6-color;
+        }
+        .magdalena & {
+            background-color: $project-3-color;
+        }
+    }
+    .project-mobile-image {
+        pointer-events: none;
+        position: absolute;
+        right: 32px;
+        bottom: 8px;
+        width: 14%;
+    }
+    .project-image-overlay {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: calc(100% - 4px);
+        height: calc(100% - 6px);
+    }
+    .project-items {
+        padding-top: 65px;
+        padding-bottom: 50px;
+    }
+    .project-item {
+        padding-top: 21px;
+        padding-bottom: 28px;
+        border-bottom: 1px dashed $secondary-color;
+        &:first-child {
+            padding-top: 0;
+        }
+        &:last-child {
+            padding-bottom: 0;
+            border: none;
+        }
+    }
+    .project-text {
+        line-height: 1.4;
+        font-size: 14px;
+    }
+    @at-root .project-brand {
+        font-family: $font-default;
+        font-size: 16px;
+        font-weight: 600;
+        color: $secondary-color;
+    }
+}
+
+// mobile first
+@media (min-width: 450px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+    .projects {
+        @at-root .project-image-container {
+        }
+        @at-root .project-desktop-image {
+        }
+        .project-mobile-image {
+            
+        }
+        .project-image-overlay {
+        }
+        .project-items {
+            padding-top: 220px;
+            padding-bottom: 150px;
+            @include overflow-hack();
+        }
+        .project-item {
+            width: 450px;
+            border: none;
+            clear: both;
+            padding: 0;
+            margin-top: -125px;
+            &:first-child {
+            }
+            &:last-child {
+            }
+            &:nth-child(2n) {
+                float: right;
+                margin-right: 20px;
+            }
+            &:nth-child(2n-1) {
+                float: left;
+                margin-left: 20px;
+            }
+        }
+        .project-text {
+        }
+        @at-root .project-brand {
+            font-size: 22px;
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {}

@@ -2618,76 +2618,87 @@ header {
           top: 18px; }
 
 @media (min-width: 992px) {
-  .menu-content {
-    background-color: transparent;
-    color: #fd7d57;
-    position: static;
-    top: auto;
-    right: auto;
-    width: auto;
-    height: auto;
-    padding: 0;
-    border: none; }
-  header .logo.main {
-    font-size: 60px; }
-  header .header-wrapper {
-    height: 80px; }
-  header .mobile-menu-icon-wrapper {
-    display: none; }
-  header .navigation-list .navigation-item {
-    position: relative;
-    float: left;
-    margin-right: 30px; }
-    header .navigation-list .navigation-item:last-child {
-      margin-right: 0; }
-  header .navigation-link {
-    font-weight: 500; }
-  .navigation-link {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    position: relative;
-    color: #fd7d57;
-    padding: 4px 6px; }
-    .navigation-link:after {
-      -webkit-transition: all 0.2s linear;
-      -moz-transition: all 0.2s linear;
-      -ms-transition: all 0.2s linear;
-      -o-transition: all 0.2s linear;
-      transition: all 0.2s linear;
-      position: absolute;
-      top: 150%;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      width: 0%;
-      content: '.';
-      color: transparent;
-      background: #fd7d57;
-      height: 1px; }
-    .active .navigation-link:after {
-      width: 100%; }
-    .navigation-link:hover:after {
-      width: 100% !important; }
-    .hovered .navigation-link:after {
-      width: 0%; }
-  header .menu-content {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    /* NEW, Spec - Firefox, Chrome, Opera */
-    align-items: center;
-    -webkit-align-items: center;
-    margin-left: auto; }
-  header nav {
-    float: left; } }
+  header {
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    transform: translateY(0px);
+    opacity: 1; }
+    .menu-content {
+      background-color: transparent;
+      color: #fd7d57;
+      position: static;
+      top: auto;
+      right: auto;
+      width: auto;
+      height: auto;
+      padding: 0;
+      border: none; }
+    header.hidden {
+      transform: translateY(-80px);
+      opacity: 0; }
+    header .logo.main {
+      font-size: 60px; }
+    header .header-wrapper {
+      height: 80px; }
+    header .mobile-menu-icon-wrapper {
+      display: none; }
+    header .navigation-list .navigation-item {
+      position: relative;
+      float: left;
+      margin-right: 30px; }
+      header .navigation-list .navigation-item:last-child {
+        margin-right: 0; }
+    header .navigation-link {
+      font-weight: 500; }
+    .navigation-link {
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      position: relative;
+      color: #fd7d57;
+      padding: 4px 6px; }
+      .navigation-link:after {
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        position: absolute;
+        top: 150%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0%;
+        content: '.';
+        color: transparent;
+        background: #fd7d57;
+        height: 1px; }
+      .active .navigation-link:after {
+        width: 100%; }
+      .navigation-link:hover:after {
+        width: 100% !important; }
+      .hovered .navigation-link:after {
+        width: 0%; }
+    header .menu-content {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;
+      /* NEW, Spec - Firefox, Chrome, Opera */
+      align-items: center;
+      -webkit-align-items: center;
+      margin-left: auto; }
+    header nav {
+      float: left; } }
 
 footer {
   background-color: #fd7d57;

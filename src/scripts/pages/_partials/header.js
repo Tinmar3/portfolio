@@ -15,29 +15,73 @@ export function modHeader() {
 
         if (screenSize.smallest || screenSize.small || screenSize.medium) {
 
-            menuButtonOnClick = () => {
-                var thisElement = event.target;
-                if (header.classList.contains('opened')) {
-                    header.classList.remove('opened');
-                } else {
-                    header.classList.add('opened');
-                }
-            }
+            // for smaller screens
 
-            menuButton.addEventListener('click', menuButtonOnClick, true);
+            (function initMobileMenu() {
+
+                menuButtonOnClick = () => {
+                    var thisElement = event.target;
+                    if (header.classList.contains('opened')) {
+                        header.classList.remove('opened');
+                    } else {
+                        header.classList.add('opened');
+                    }
+                }
+
+                menuButton.addEventListener('click', menuButtonOnClick, true);
+
+            })();
 
         } else {
 
-            navigationOnHover = () => {
-                navigation.classList.add('hovered');
-            }
+            // for bigger screens
 
-            navigationOnLeave = () => {
-                navigation.classList.remove('hovered');
-            }
+            (function initDesktopHover() {
 
-            navigation.addEventListener('mouseenter', navigationOnHover, true);
-            navigation.addEventListener('mouseleave', navigationOnLeave, true);
+                navigationOnHover = () => {
+                    navigation.classList.add('hovered');
+                }
+
+                navigationOnLeave = () => {
+                    navigation.classList.remove('hovered');
+                }
+
+                navigation.addEventListener('mouseenter', navigationOnHover, true);
+                navigation.addEventListener('mouseleave', navigationOnLeave, true);
+
+            })();
+
+            (function initHeaderHiding() {
+
+                var lastScrollTop = 0;
+                var interval;
+
+                function headerOnScroll() {
+
+                    var st = window.pageYOffset || document.documentElement.scrollTop;
+
+                    if (st > lastScrollTop) {
+                        // downscroll code
+                        if (st > 150 && !header.classList.contains('hidden')) {
+                            setTimeout(() => {
+                                header.classList.add('hidden');
+                            }, 400);
+                        }
+                    } else {
+                        // upscroll code
+                        if (header.classList.contains('hidden')) {
+                            setTimeout(() => {
+                                header.classList.remove('hidden');
+                            }, 200);
+                        }
+                    }
+
+                    lastScrollTop = st;
+                }
+
+                document.addEventListener("scroll", headerOnScroll, true);
+
+            })();
 
         }
 

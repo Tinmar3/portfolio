@@ -100,6 +100,9 @@ header {
 
 @media (min-width: 992px) {
     header {
+        @include transition(0.3, ease-in);
+        transform: translateY(0px);
+        opacity: 1;
         @at-root .menu-content {
             background-color: transparent;
             color: $secondary-color;
@@ -110,6 +113,10 @@ header {
             height: auto;
             padding: 0;
             border: none;
+        }
+        &.hidden {
+            transform: translateY(-80px);
+            opacity: 0;
         }
         .logo.main {
             font-size: 60px;

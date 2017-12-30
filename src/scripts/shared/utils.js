@@ -39,7 +39,7 @@ export function updateScreenSize() {
 
 }
 
-export function modDelayedAction() {
+export function delayedAction() {
     var delayedIntervals = [];
 
     return {

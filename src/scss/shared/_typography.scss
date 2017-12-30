@@ -9,8 +9,11 @@
 }
 
 .neutral-text {
-    color: $text-color;
+    color: $neutral-color;
     font-family: $font-secondary;
+    .highlighted {
+        font-family: $font-default;
+    }
 }
 
 .link {
@@ -25,12 +28,40 @@ h3 {
     }
 }
 
+.big-text {
+    font-weight: 700;
+    font-size: 23px;
+    &.projects {
+        margin-bottom: 30px;
+    }
+}
+
+.big-text,
+.medium-text {
+    .special {
+        color: $neutral-color;
+    }
+}
+
+.medium-text {}
+
 // mobile first
 @media (min-width: 450px) {}
 
 @media (min-width: 768px) {}
 
 @media (min-width: 992px) {
+    .big-text {
+        font-size: 40px;
+        &.projects {
+            width: 700px;
+            line-height: 1.3;
+            margin-bottom: 15px;
+        }
+    }
+    .medium-text {
+        font-size: 28px;
+    }
 }
 
 @media (min-width: 1200px) {}

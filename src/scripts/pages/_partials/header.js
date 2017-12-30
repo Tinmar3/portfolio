@@ -8,6 +8,7 @@ export function modHeader() {
     var menuButtonOnClick;
     var navigationOnHover;
     var navigationOnLeave;
+    var headerOnScroll;
 
     function initHeader() {
 
@@ -56,24 +57,20 @@ export function modHeader() {
                 var lastScrollTop = 0;
                 var interval;
 
-                function headerOnScroll() {
+                headerOnScroll = () => {
 
                     var st = window.pageYOffset || document.documentElement.scrollTop;
 
                     if (st > lastScrollTop) {
                         // downscroll code
                         if (st > 150 && !header.classList.contains('hidden')) {
-                            setTimeout(() => {
-                                header.classList.add('hidden');
-                            }, 400);
+                            header.classList.add('hidden');
                         }
                     } else {
                         // upscroll code
-                        if (header.classList.contains('hidden')) {
-                            setTimeout(() => {
-                                header.classList.remove('hidden');
-                            }, 200);
-                        }
+                        setTimeout(() => {
+                            header.classList.remove('hidden');
+                        }, 300);
                     }
 
                     lastScrollTop = st;
@@ -91,6 +88,7 @@ export function modHeader() {
         menuButton.removeEventListener('click', menuButtonOnClick, true);
         navigation.removeEventListener('mouseenter', navigationOnHover, true);
         navigation.removeEventListener('mouseleave', navigationOnLeave, true);
+        document.removeEventListener("scroll", headerOnScroll, true);
     }
 
     var PublicAPI = {

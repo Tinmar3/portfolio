@@ -60,8 +60,14 @@ body {
     padding: 4px 10px;
 }
 
+main {
+    padding-top: 95px;
+    padding-bottom: 10px;
+}
+
 // imports for override START
 @import 'pages/projects';
+@import 'pages/about_me';
 @import 'shared/media';
 @import 'shared/media_query';
 @import 'shared/bootstrap_grid';

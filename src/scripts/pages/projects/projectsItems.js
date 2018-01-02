@@ -4,6 +4,14 @@ export function modProjectsItems() {
     var projectItemOnHover;
     var projectItemOnLeave;
 
+    projectItems.forEach((thisItem) => {
+        var allMyChildren = thisItem.querySelectorAll('*');
+        allMyChildren.forEach((thisItem) => {
+            thisItem.stop
+        });
+        console.log(allMyChildren);
+    });
+
     function initProjectItems() {
 
         projectItemOnHover = (e) => {

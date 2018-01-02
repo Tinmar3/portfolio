@@ -106,7 +106,10 @@ input, select {
 
 .text {
   font-family: "Open Sans", sans-serif;
-  color: #fd7d57; }
+  color: #93a4aa;
+  font-size: 16px;
+  line-height: 145%;
+  margin-bottom: 10px; }
 
 .secondary-text {
   font-family: "Open Sans", sans-serif;
@@ -150,18 +153,25 @@ h3 {
   text-align: center; }
 
 @media (min-width: 992px) {
+  .text {
+    font-size: 20px;
+    margin-bottom: 12px; }
   .big-text {
-    font-size: 40px; }
+    font-size: 40px;
+    line-height: 1.3; }
     .big-text.projects {
       width: 700px;
-      line-height: 1.3;
       margin-bottom: 15px; }
+    .big-text.about-me {
+      margin-bottom: 25px; }
   .medium-text {
     font-size: 28px; }
     .medium-text.projects {
       width: 700px; }
     .medium-text.center {
-      width: auto; } }
+      width: auto; }
+    .medium-text.about-me {
+      margin-bottom: 17px; } }
 
 .checkbox-1 .checkbox-real {
   position: relative;
@@ -541,7 +551,7 @@ body {
   border-radius: 5px;
   padding: 4px 10px; }
 
-.projects main {
+main {
   padding-top: 95px;
   padding-bottom: 10px; }
 
@@ -620,9 +630,6 @@ body {
       margin-left: 15px; }
 
 @media (min-width: 992px) {
-  .projects main {
-    padding-top: 170px;
-    padding-bottom: 70px; }
   .project-image-overlay {
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
@@ -772,7 +779,10 @@ body {
 
 @media (min-width: 992px) {
   .grid.center {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  main {
+    padding-top: 170px;
+    padding-bottom: 70px; } }
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)

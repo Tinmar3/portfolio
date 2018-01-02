@@ -1,53 +1,21 @@
 .projects {
     main {
         padding-top: 95px;
+        padding-bottom: 10px;
     }
     @at-root .project-image-container {
         position: relative;
-        overflow: hidden;
         margin-bottom: 15px;
     }
     @at-root .project-desktop-image {
-        width: 98%;
-        width: calc(100% - 4px);
+        width: 100%;
         height: 100%;
         border-radius: 4px;
-        padding: 2px;
-        .salvus & {
-            background-color: $project-1-color;
-        }
-        .duadvisor & {
-            background-color: $project-6-color;
-        }
-        .jbc & {
-            background-color: $neutral-color;
-        }
-        .smart-sense & {
-            background-color: $project-2-color;
-        }
-        .smart-net & {
-            background-color: $project-6-color;
-        }
-        .magdalena & {
-            background-color: $project-3-color;
-        }
     }
     .project-mobile-image {
         pointer-events: none;
-        position: absolute;
-        right: 32px;
-        bottom: 8px;
-        width: 14%;
-    }
-    .project-image-overlay {
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        width: calc(100% - 4px);
-        height: calc(100% - 6px);
-    }
-    .project-items {
-        padding-bottom: 50px;
+        width: 100%;
+        height: 100%;
     }
     .project-item {
         padding-top: 21px;
@@ -70,6 +38,38 @@
         font-size: 16px;
         font-weight: 600;
         color: $secondary-color;
+        margin-bottom: 5px;
+    }
+    .project-items {
+        margin-bottom: 30px;
+    }
+    .mobile-image-container {
+        position: relative;
+        width: 14%;
+        height: 54%;
+        position: absolute;
+        right: -10px;
+        bottom: 0;
+    }
+    .project-button-container {
+        margin-top: 15px;
+        font-size: 14px;
+        .fa {
+            @include transition(0.2, ease-in);
+            font-size: 25px;
+            margin-left: 10px;
+            color: $neutral-color;
+        }
+        .project-item-visit-page {
+            @include flex-center-vertical();
+            display: -webkit-inline-flex;
+            display: inline-flex;
+            &:hover {
+                .fa {
+                    margin-left: 15px;
+                }
+            }
+        }
     }
 }
 
@@ -82,31 +82,42 @@
     .projects {
         main {
             padding-top: 170px;
+            padding-bottom: 70px;
         }
-        @at-root .project-image-container {
+        @at-root .project-image-overlay {
+            @include transition(0.3, ease-in);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparentize($main-color, 0.7);
+            border-radius: 4px;
+            pointer-events: none;
+            .mobile-image-container & {
+                width: 27%;
+                right: 0;
+                left: auto;
+                border-radius: 15px;
+            }
         }
-        @at-root .project-desktop-image {
-        }
-        .project-mobile-image {
-            
-        }
-        .project-image-overlay {
-        }
+        @at-root .project-image-container {}
+        .project-mobile-image {}
         .project-items {
             margin-top: 250px;
-            padding-bottom: 150px;
+            margin-bottom: 100px;
             @include overflow-hack();
         }
+        .mobile-image-container {
+            right: -17px;
+        }
         .project-item {
+            position: relative;
             width: 450px;
             border: none;
             clear: both;
-            padding: 0;
-            margin-top: -125px;
-            &:first-child {
-            }
-            &:last-child {
-            }
+            padding: 0 0 25px;
+            margin-top: -110px;
             &:nth-child(2n) {
                 float: right;
                 margin-right: 20px;
@@ -115,13 +126,140 @@
                 float: left;
                 margin-left: 20px;
             }
+            &.salvus {
+                &:hover {
+                    & .project-desktop-image {
+                        background-color: $project-1-color;
+                    }
+                    & .project-brand {
+                        color: $project-1-color;
+                    }
+                }
+                &:after {
+                    background: $project-1-color;
+                }
+            }
+            &.duadvisor {
+                &:hover {
+                    & .project-desktop-image {
+                        background-color: $project-6-color;
+                    }
+                    & .project-brand {
+                        color: $project-6-color;
+                    }
+                }
+                &:after {
+                    background: $project-6-color;
+                }
+            }
+            &.jbc {
+                &:hover {
+                    & .project-desktop-image {
+                        background-color: $neutral-color;
+                    }
+                    & .project-brand {
+                        color: $project-5-color;
+                    }
+                }
+                &:after {
+                    background: $project-5-color;
+                }
+            }
+            &.smart-sense {
+                &:hover {
+                    & .project-desktop-image {
+                        background-color: $project-2-color;
+                    }
+                    & .project-brand {
+                        color: $project-2-color;
+                    }
+                }
+                &:after {
+                    background: $project-2-color;
+                }
+            }
+            &.smart-net {
+                &:hover {
+                    & .project-desktop-image {
+                        background-color: $project-4-color;
+                    }
+                    & .project-brand {
+                        color: $project-4-color;
+                    }
+                }
+                &:after {
+                    background: $project-4-color;
+                }
+            }
+            &.magdalena {
+                &:hover {
+                    & .project-desktop-image {
+                        background-color: $project-3-color;
+                    }
+                    & .project-brand {
+                        color: $project-3-color;
+                    }
+                }
+                &:after {
+                    background: $project-3-color;
+                }
+            }
+            &:after {
+                @include transition(0.4, ease-in);
+                position: absolute;
+                top: 100%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 15%;
+                content: '.';
+                color: transparent; // background: $secondary-color;
+                height: 1px;
+            }
+            &:hover {
+                & .project-image-overlay {
+                    background-color: transparent;
+                }
+                & .project-desktop-image {
+                    width: 100%;
+                    height: calc(100% + 4px);
+                    padding: 0;
+                }
+                &:after {
+                    height: 1px;
+                    width: 85%;
+                }
+                & .project-button-container {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: all;
+                }
+            }
+            &:last-child {
+                padding-bottom: 28px;
+            }
         }
         .project-text {
+            font-size: 15px;
         }
         @at-root .project-brand {
+            @include transition(0.3, ease-in);
             font-size: 22px;
             display: block;
-            margin-bottom: 5px;
+        }
+        .project-button-container {
+            @include transition(0.3, ease-in);
+            @include flex-center-horizontal();
+            top: 93%;
+            top: calc(100% - 31px);
+            left: 0;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
         }
     }
 }

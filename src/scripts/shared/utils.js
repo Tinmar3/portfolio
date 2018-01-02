@@ -1,8 +1,8 @@
 export function pageCheck() {
     var pages = {};
 
-    if (document.getElementById('home')) {
-        pages['home'] = true;
+    if (document.getElementById('projects-page')) {
+        pages['projects'] = true;
     } else if (document.getElementById('about-us')) {
         pages['about'] = true;
     } else if (document.getElementById('region-select')) {

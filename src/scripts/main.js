@@ -17,8 +17,8 @@ DomReady.ready(() => {
     header.initHeader();
     footer.initFooter();
 
-    if (pages.home) {
-
+    if (pages.projects) {
+        require('./pages/projects/projectsPage.js');
     }
 
     function reinitialize() {
@@ -37,3 +37,6 @@ DomReady.ready(() => {
     });
 
 });
+
+// window.onload = () => {
+// }

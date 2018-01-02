@@ -63,7 +63,7 @@ export function modHeader() {
 
                     if (st > lastScrollTop) {
                         // downscroll code
-                        if (st > 150 && !header.classList.contains('hidden')) {
+                        if (st > 220 && !header.classList.contains('hidden')) {
                             header.classList.add('hidden');
                         }
                     } else {

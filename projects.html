@@ -16,6 +16,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Open+Sans:400,400i,600,700&amp;subset=latin-ext" rel="stylesheet">
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700|Titillium+Web:400,400i,600,600i&amp;subset=latin-ext"
         rel="stylesheet"> -->
 
@@ -23,7 +25,7 @@
 
 </head>
 
-<body class="projects">
+<body id="projects-page" class="projects">
 
     <header>
         <div class="grid center header-wrapper">
@@ -58,94 +60,177 @@
     <main class="grid center">
         <div class="easy-overlay"></div>
         <div class="projects-text">
-            <p class="big-text projects">Most of my <span class="special">projects</span> consist of classic HTML+CSS+JS structure...</p>
+            <p class="big-text projects">Most of my <span class="special">projects</span> consist of classic HTML(5)+CSS(3)+JS structure...</p>
             <p class="medium-text projects">...but some of them needed extra piece of <span class="special">magic.</span></p>
         </div>
         <div class="project-items">
             <div class="project-item salvus">
                 <div class="project-image-container">
                     <img class="project-desktop-image" src="src/images/projects_salvus.png" />
-                    <img class="project-mobile-image" src="/src/images/projects_salvus_mobile.png" />
+                    <div class="mobile-image-container">
+                        <div class="project-image-overlay"></div>
+                        <img class="project-mobile-image" src="/src/images/projects_salvus_mobile.png" />
+                    </div>
                     <div class="project-image-overlay">
 
                     </div>
                 </div>
                 <div class="project-item-text">
+                    <h4 class="project-brand">Salvus health</h4>
+                    <!-- <div class="arrow-button">
+                        <div class="arrow-button-outer">
+                            <div class="arrow-button-inner">
+                                <span>TEXT</span>
+                            </div>
+                        </div>
+                    </div> -->
                     <p class="neutral-text project-text">
-                        <span class="project-brand">Salvus health</span> Big medicines selling company. Goal was to create friendly and <em>warm’</em> web page from design, with lot of animations. Page has custom advanced scrolling by sections in <span class="highlighted">home page</span>, advanced menu in <span class="highlighted">about us</span> and is gorgeous all around. In the end it’s made <em>Vanilla</em>, with the help of Webpack and some smaller libraries like <span class="highlighted">zenscroll</span>. SCSS handled CSS mess. Best web page I've made till this day, design complexity and code cleanliness wise.
+                        Big medicine selling company. Goal was to create friendly and <em>warm</em> web page from design,
+                        with lot of animations. Page has custom advanced scrolling by sections in <span class="highlighted">home</span>                        page, advanced menu in <span class="highlighted">about us</span> page and is gorgeous all around.
+                        In the end it’s made <em>Vanilla (JS)</em>, with the help of Webpack and some smaller libraries like
+                        <span class="highlighted">zenscroll</span>. SCSS handled CSS's mess. Best web page I've made 'till
+                        this day, design complexity and code cleanliness wise.
                     </p>
+                </div>
+                <div class="project-button-container">
+                    <a href="http://salvus.zeraxo.com/" target="_blank" class="button-1 project-item-visit-page">
+                        <span class="button-1-text">VISIT PAGE</span>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
             <div class="project-item duadvisor">
                 <div class="project-image-container">
                     <img class="project-desktop-image" src="src/images/projects_duadvisor.png" />
-                    <img class="project-mobile-image" src="/src/images/projects_duadvisor_mobile.png" />
-                    <div class="project-image-overlay">
-
+                    <div class="mobile-image-container">
+                        <div class="project-image-overlay"></div>
+                        <img class="project-mobile-image" src="/src/images/projects_duadvisor_mobile.png" />
                     </div>
+                    <div class="project-image-overlay"></div>
                 </div>
                 <div class="project-item-text">
+                    <h4 class="project-brand">DuAdvisor</h4>
                     <p class="neutral-text project-text">
-                        <span class="project-brand">DuAdvisor</span> Like its name says, this app serves for advising and informing purposes for the City of Dubrovnik. I created <em>slice</em> from design with the help of JQuery. It has a lot of subpages and many different components, like any other advanced application. Later, back-end dev of this app implemented AngularJS and CMS.
+                        Like its name says, this app serves for advising and informing purposes for the City of Dubrovnik. I created <em>slice</em>                        from design with the help of <span class="highlighted">JQuery</span>. It has a lot of subpages and
+                        many different components, like any other advanced application. Later, back-end dev of this app implemented
+                        AngularJS and CMS.
                     </p>
+                </div>
+                <div class="project-button-container">
+                    <a href="http://www.duadvisor.hr/" target="_blank" class="button-1 project-item-visit-page">
+                            <span class="button-1-text">VISIT PAGE</span>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </a>
                 </div>
             </div>
             <div class="project-item jbc">
                 <div class="project-image-container">
-                    <img class="project-desktop-image" src="src/images/projects_jbc.png" />
-                    <img class="project-mobile-image" src="/src/images/projects_jbc_mobile.png" />
+                    <img class="project-desktop-image" src="src/images/projects_JBC.png" />
+                    <div class="mobile-image-container">
+                        <div class="project-image-overlay"></div>
+                        <img class="project-mobile-image" src="/src/images/projects_JBC_mobile.png" />
+                    </div>
                     <div class="project-image-overlay">
 
                     </div>
                 </div>
                 <div class="project-item-text">
+                    <h4 class="project-brand">JBC</h4>
                     <p class="neutral-text project-text">
-                        <span class="project-brand">JBC</span> The oil and gas market's research center. They needed an application for handling big amount of data of their reports, news, company informations and so on, for every user of the app. The best solution was to implement ReactJS – there are a lot of components and subpages so dynamical rendering just made sense. SCSS also helped here. 
+                        The oil and gas market's research center. They needed an application for handling big amount of data of their reports, news,
+                        company informations and so on, for every user of the app. The best solution was to implement
+                        <span class="highlighted">ReactJS</span> – there are a lot of components, subpages and data so dynamical
+                        rendering just made sense. SCSS also helped here.
                     </p>
+                </div>
+                <div class="project-button-container">
+                    <a href="http://jbc.zeraxo.com/" target="_blank" class="button-1 project-item-visit-page">
+                            <span class="button-1-text">VISIT PAGE</span>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </a>
                 </div>
             </div>
             <div class="project-item smart-sense">
                 <div class="project-image-container">
                     <img class="project-desktop-image" src="src/images/projects_smart_sense.png" />
-                    <img class="project-mobile-image" src="/src/images/projects_smart_sense_mobile.png" />
+                    <div class="mobile-image-container">
+                        <div class="project-image-overlay"></div>
+                        <img class="project-mobile-image" src="/src/images/projects_smart_sense_mobile.png" />
+                    </div>
                     <div class="project-image-overlay">
 
                     </div>
                 </div>
                 <div class="project-item-text">
+                    <h4 class="project-brand">Smart-sense</h4>
                     <p class="neutral-text project-text">
-                        <span class="project-brand">Smart-sense</span> Smart sensors development company. Their web page is really simple, except it has custom scrolling by full page sections – and that’s why I've used <span class="highlighted">fullPage.js</span> JQuery library. One of the first web pages I’ve ever made from scratch. 
+                        Smart sensors development company. Their web page is really simple, except it has custom scrolling by full page sections
+                        – and that’s why I've used
+                        <span class="highlighted">fullPage.js</span> JQuery library. One of the first web pages I’ve ever
+                        made from scratch.
                     </p>
+                </div>
+                <div class="project-button-container">
+                    <a href="http://smart-sense.hr/" target="_blank" class="button-1 project-item-visit-page">
+                            <span class="button-1-text">VISIT PAGE</span>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </a>
                 </div>
             </div>
             <div class="project-item smart-net">
                 <div class="project-image-container">
                     <img class="project-desktop-image" src="src/images/projects_smart_net.png" />
-                    <img class="project-mobile-image" src="/src/images/projects_smart_net_mobile.png" />
+                    <div class="mobile-image-container">
+                        <div class="project-image-overlay"></div>
+                        <img class="project-mobile-image" src="/src/images/projects_smart_net_mobile.png" />
+                    </div>
                     <div class="project-image-overlay">
 
                     </div>
                 </div>
                 <div class="project-item-text">
+                    <h4 class="project-brand">Smart-net</h4>
                     <p class="neutral-text project-text">
-                        <span class="project-brand">Smart-net</span> IT networks and technology implementation company. Really simple page with nice middle menu for navigation through their areas of work. Page didn’t require any special technologies, SCSS was only used for better CSS organization.
+                        IT networks and technology implementation company. Really simple page with nice middle menu for navigation through their
+                        areas of work. Page didn’t require any special technologies, SCSS was only used for better CSS organization.
                     </p>
+                </div>
+                <div class="project-button-container">
+                    <a href="http://smart-net.hr/" target="_blank" class="button-1 project-item-visit-page">
+                            <span class="button-1-text">VISIT PAGE</span>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </a>
                 </div>
             </div>
             <div class="project-item magdalena">
                 <div class="project-image-container">
                     <img class="project-desktop-image" src="src/images/projects_magdalena.png" />
-                    <img class="project-mobile-image" src="/src/images/projects_magdalena_mobile.png" />
+                    <div class="mobile-image-container">
+                        <div class="project-image-overlay"></div>
+                        <img class="project-mobile-image" src="/src/images/projects_magdalena_mobile.png" />
+                    </div>
                     <div class="project-image-overlay">
 
                     </div>
                 </div>
                 <div class="project-item-text">
+                    <h4 class="project-brand">Magdalena polyclinic</h4>
                     <p class="neutral-text project-text">
-                        <span class="project-brand">Magdalena polyclinic</span> Special hospital for cardiovascular surgery and cardiology. Lot of data, lot of text and lot of information needed to be shown on the page. It was built with JQuery for easier making of cool sliders and other data visualization containers. One of the first web pages I've made from scratch, too.
+                        Special hospital for cardiovascular surgery and cardiology. A lot of data, a lot of text and a lot of information needed
+                        to be shown on the page. It was built with <span class="highlighted">JQuery</span>                        for easier making of cool sliders and other data visualization containers. One of the first web pages
+                        I've made from scratch, too.
                     </p>
                 </div>
+                <div class="project-button-container">
+                    <a href="http://magdalena.zeraxo.com/" target="_blank" class="button-1 project-item-visit-page">
+                            <span class="button-1-text">VISIT PAGE</span>
+                            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        </a>
+                </div>
             </div>
+        </div>
+        <div class="projects-text">
+            <p class="medium-text projects center">Liked my porftolio page? Check its code on <a href="https://github.com/Tinmar3/portfolio" target="_blank" class="special link-in-text">GitHub!</a></p>
         </div>
     </main>
 

@@ -19,6 +19,8 @@ DomReady.ready(() => {
 
     if (pages.projects) {
         require('./pages/projects/projectsPage.js');
+    } else if (pages.aboutMe) {
+        require('./pages/aboutMe/aboutMePage.js');
     }
 
     function reinitialize() {

@@ -241,6 +241,12 @@ $grid-width-half: 470px;
     }
 }
 
+@mixin box-shadow($shadowValue) {
+    -webkit-box-shadow: $shadowValue;
+    -moz-box-shadow: $shadowValue;
+    box-shadow: $shadowValue;
+}
+
 %no-text-select {
     -moz-user-select: none;
     -khtml-user-select: none;

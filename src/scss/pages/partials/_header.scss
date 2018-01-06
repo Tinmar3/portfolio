@@ -1,10 +1,8 @@
 header {
+    @include box-shadow(unquote("0px -1px 2px " + $neutral-color + ", inset 0 1px 0 #FFFFFF"));
     position: fixed;
     width: 100%;
     background-color: $main-color;
-    -webkit-box-shadow: 0px 1px 0px 0px rgba(253, 125, 87,0.08);
-    -moz-box-shadow: 0px 1px 0px 0px rgba(253, 125, 87,0.08);
-    box-shadow: 0px 1px 0px 0px rgba(253, 125, 87,0.08);
     z-index: 10;
     left: 0;
     top: 0;

@@ -3,8 +3,8 @@ export function pageCheck() {
 
     if (document.getElementById('projects-page')) {
         pages['projects'] = true;
-    } else if (document.getElementById('about-us')) {
-        pages['about'] = true;
+    } else if (document.getElementById('about-me-page')) {
+        pages['aboutMe'] = true;
     } else if (document.getElementById('region-select')) {
         pages['regionSelector'] = true;
     } else if (document.getElementById('brands')) {

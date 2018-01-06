@@ -1,5 +1,12 @@
 .about-me {
-
+    .technologies-container {
+        display: none;
+    }
+    .contact-me {
+        margin-top: 70px;
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
 }
 
 // mobile first
@@ -9,7 +16,48 @@
 
 @media (min-width: 992px) {
     .about-me {
-           
+        .technologies-container {
+            display: block;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            .grid {
+                position: relative;
+            }
+        }
+        .technologies {
+            position: absolute;
+            width: 360px;
+            right: -364px;
+            padding-top: 120px;
+            img {
+                @include transition(0.2, linear);
+                width: 200px;
+                display: block;
+                margin-top: 30px;
+                filter: grayscale(100%);
+                opacity: 0.2;
+                &.trio {
+                    width: 130px;
+                }
+                &.sass {
+                    margin-top: 30px;
+                    width: 80px;
+                }
+                &.react {
+                    width: 135px;
+                }
+                &.jquery {
+                    width: 105px;
+                }
+                &.webpack {
+                    width: 130px;
+                }
+            }
+        }
     }
 }
 

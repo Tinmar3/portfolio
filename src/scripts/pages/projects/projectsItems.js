@@ -9,7 +9,6 @@ export function modProjectsItems() {
         allMyChildren.forEach((thisItem) => {
             thisItem.stop
         });
-        console.log(allMyChildren);
     });
 
     function initProjectItems() {

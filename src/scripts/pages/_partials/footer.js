@@ -10,9 +10,6 @@ export function modFooter() {
         var mainHeight = main.offsetHeight;
         var footerHeight = footer.offsetHeight;
 
-        console.log("mainHeight " + mainHeight);
-        console.log(getViewport().height);
-
         if((mainHeight + footerHeight) < getViewport().height) {
             footer.classList.add('fixed');
         } else {

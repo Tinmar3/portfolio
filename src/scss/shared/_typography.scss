@@ -14,9 +14,17 @@
 .neutral-text {
     color: $neutral-color;
     font-family: $font-secondary;
+}
+
+.text,
+.neutral-text {
     .highlighted {
-        font-family: $font-default;
         color: lighten($neutral-color, 16%);
+    }
+    .special {
+        font-family: $font-default;
+        color: $secondary-color;
+        font-weight: 700;
     }
 }
 
@@ -45,6 +53,9 @@ h3 {
     &.projects {
         margin-bottom: 10px;
     }
+    &.about-me {
+        margin-bottom: 40px;
+    }
 }
 
 .big-text,
@@ -55,11 +66,15 @@ h3 {
 }
 
 .medium-text {
+    font-weight: 500;
     &.projects {
         margin-bottom: 40px;
     }
     &.center {
         text-align: center;
+    }
+    &.about-me {
+        margin-bottom: 25px;
     }
 }
 
@@ -70,7 +85,7 @@ h3 {
 
 @media (min-width: 992px) {
     .text {
-        font-size: 20px;
+        font-size: 17px;
         margin-bottom: 12px;
     }
     .big-text {
@@ -81,7 +96,7 @@ h3 {
             margin-bottom: 15px;
         }
         &.about-me {
-            margin-bottom: 25px;
+            margin-bottom: 40px;
         }
     }
     .medium-text {
@@ -93,7 +108,7 @@ h3 {
             width: auto;
         }
         &.about-me {
-            margin-bottom: 17px;
+            margin-bottom: 25px;
         }
     }
 }

@@ -65,6 +65,14 @@ main {
     padding-bottom: 10px;
 }
 
+input, textarea {
+    background-color: transparent;
+    outline: none;
+    border: 2px solid $secondary-color;
+    padding: 6px 10px;
+    border-radius: 2px;
+}
+
 // imports for override START
 @import 'pages/projects';
 @import 'pages/about_me';

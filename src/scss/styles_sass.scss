@@ -51,7 +51,7 @@ body {
     max-width: 1120px;
     background: -webkit-linear-gradient(top, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, .05) 70%);
     background: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 0, hsla(0, 0%, 100%, .05) 70%);
-    z-index: 0;
+    z-index: -1;
 }
 
 .button-1 {
@@ -65,17 +65,38 @@ main {
     padding-bottom: 10px;
 }
 
-input, textarea {
+input,
+textarea {
     background-color: transparent;
     outline: none;
     border: 2px solid $secondary-color;
     padding: 6px 10px;
-    border-radius: 2px;
+    border-radius: 3px;
+    display: block;
+    color: $neutral-color;
+    margin-bottom: 10px;
+    font-size: 16px;
+    @include placehold {
+        color: $neutral-color;
+        font-family: $font-default;
+        font-size: 16px;
+    }
+    ;
+}
+
+input {
+    float: left;
+}
+
+textarea {
+    clear: both;
+    display: block;
 }
 
 // imports for override START
 @import 'pages/projects';
 @import 'pages/about_me';
+@import 'pages/contact';
 @import 'shared/media';
 @import 'shared/media_query';
 @import 'shared/bootstrap_grid';

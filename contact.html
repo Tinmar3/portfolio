@@ -60,13 +60,21 @@
     <main class="grid center">
         <div class="easy-overlay"></div>
         <h2 class="big-text contact">Feel free to <span class="special">contact</span> me.</h2>
-        <h3 class="medium-text-special">Have an interesting project? Think we could successfully cooperate? Introduce yourself, tell me something about it and I'll get in touch as soon as possible.</h3>
-        <form>
-            <input type="text" name="name" placeholder="Name*">
-            <input type="email" name="email" placeholder="E-mail*">
-            <textarea placeholder="Tell me more about you and your project."></textarea>
-            <input type="submit" value="Send">
-        </form>
+        <h3 class="medium-text-special">Have an interesting project? Think we could successfully cooperate? Introduce yourself, tell me something about your
+            work and I'll get in touch as soon as possible.</h3>
+
+
+        <div class="form-container">
+                <div class="form-overlay"></div>
+            <form>
+                
+                <input required class="contact-input" type="text" name="name" placeholder="Name*">
+                <input required class="contact-input" type="email" name="email" placeholder="E-mail*">
+                <textarea required rows="8" class="contact-textarea" placeholder="Tell me more about you and your project.*"></textarea>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+
     </main>
 
     <footer>

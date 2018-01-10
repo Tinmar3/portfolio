@@ -59,19 +59,22 @@
 
     <main class="grid center">
         <div class="easy-overlay"></div>
-        <h2 class="big-text contact">Feel free to <span class="special">contact</span> me.</h2>
-        <h3 class="medium-text-special">Have an interesting project? Think we could successfully cooperate? Introduce yourself, tell me something about your
+        <h2 class="big-text contact center">Feel free to <span class="special">contact</span> me.</h2>
+        <h3 class="medium-text-special center">Have an interesting project? Think we could successfully cooperate? Introduce yourself, tell me something about your
             work and I'll get in touch as soon as possible.</h3>
 
 
         <div class="form-container">
-                <div class="form-overlay"></div>
+            <!-- <div class="form-overlay"></div> -->
             <form>
-                
                 <input required class="contact-input" type="text" name="name" placeholder="Name*">
                 <input required class="contact-input" type="email" name="email" placeholder="E-mail*">
-                <textarea required rows="8" class="contact-textarea" placeholder="Tell me more about you and your project.*"></textarea>
-                <input type="submit" value="Send">
+                <textarea required rows="9" class="contact-textarea" placeholder="Tell me more about you and your project.*"></textarea>
+                <input class="undisplayed" type="submit" value="Send">
+                <a class="button-1">
+                    <span class="button-1-text">SUBMIT</span>
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                </a>
             </form>
         </div>
 

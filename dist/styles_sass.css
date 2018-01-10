@@ -152,8 +152,16 @@ h3 {
     margin-bottom: 40px; }
 
 .big-text .special,
-.medium-text .special {
+.medium-text .special,
+.medium-text-special .special {
   color: #93a4aa; }
+
+.big-text.center,
+.medium-text.center,
+.medium-text-special.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
 
 .medium-text {
   font-weight: 500; }
@@ -196,8 +204,8 @@ h3 {
     color: #93a4aa;
     line-height: 130%;
     width: 700px;
-    font-size: 21px;
-    margin-bottom: 60px; } }
+    font-size: 20px;
+    margin-bottom: 20px; } }
 
 .checkbox-1 .checkbox-real {
   position: relative;
@@ -572,10 +580,8 @@ body {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 0.05) 70%);
   z-index: -1; }
 
-.button-1 {
-  background-color: #081340;
-  border-radius: 5px;
-  padding: 4px 10px; }
+.undisplayed {
+  display: none; }
 
 main {
   padding-top: 95px;
@@ -585,13 +591,15 @@ input,
 textarea {
   background-color: transparent;
   outline: none;
-  border: 2px solid #fd7d57;
+  border: 1px solid #fd7d57;
   padding: 6px 10px;
   border-radius: 3px;
   display: block;
   color: #93a4aa;
   margin-bottom: 10px;
-  font-size: 16px; }
+  font-size: 16px;
+  background: #081340;
+  font-family: "Lato", sans-serif; }
   input::-webkit-input-placeholder,
   textarea::-webkit-input-placeholder {
     color: #93a4aa;
@@ -619,6 +627,35 @@ input {
 textarea {
   clear: both;
   display: block; }
+
+.button-1 {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  align-items: center;
+  -webkit-align-items: center;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  background-color: #081340;
+  border-radius: 5px;
+  padding: 4px 10px;
+  cursor: pointer; }
+  .button-1 .fa {
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    font-size: 25px;
+    margin-left: 10px;
+    color: #93a4aa; }
+  .button-1:hover .fa {
+    margin-left: 15px; }
 
 .projects .responsive-container {
   display: none; }
@@ -672,30 +709,6 @@ textarea {
 .projects .project-button-container {
   margin-top: 15px;
   font-size: 14px; }
-  .projects .project-button-container .fa {
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    -ms-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
-    font-size: 25px;
-    margin-left: 10px;
-    color: #93a4aa; }
-  .projects .project-button-container .project-item-visit-page {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: flex;
-    /* NEW, Spec - Firefox, Chrome, Opera */
-    align-items: center;
-    -webkit-align-items: center;
-    display: -webkit-inline-flex;
-    display: inline-flex; }
-    .projects .project-button-container .project-item-visit-page:hover .fa {
-      margin-left: 15px; }
 
 @media (min-width: 992px) {
   .project-image-overlay {
@@ -914,16 +927,6 @@ textarea {
       .about-me .technologies img.webpack {
         width: 130px; } }
 
-.contact .form-overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #081340;
-  z-index: -1;
-  border-radius: 4px; }
-
 .contact .form-container {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -952,7 +955,8 @@ textarea {
   .contact form .contact-textarea {
     clear: both;
     margin-bottom: 35px;
-    width: 542px; }
+    width: 542px;
+    max-width: 542px; }
 
 @media (min-width: 992px) {
   .grid.center {
@@ -962,7 +966,10 @@ textarea {
     padding-bottom: 70px; }
   .text-container {
     padding: 0 10px;
-    width: 75%; } }
+    width: 75%; }
+    .text-container.center {
+      margin-left: auto;
+      margin-right: auto; } }
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)

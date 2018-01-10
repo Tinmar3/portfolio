@@ -53,22 +53,6 @@
     .project-button-container {
         margin-top: 15px;
         font-size: 14px;
-        .fa {
-            @include transition(0.2, ease-in);
-            font-size: 25px;
-            margin-left: 10px;
-            color: $neutral-color;
-        }
-        .project-item-visit-page {
-            @include flex-center-vertical();
-            display: -webkit-inline-flex;
-            display: inline-flex;
-            &:hover {
-                .fa {
-                    margin-left: 15px;
-                }
-            }
-        }
     }
 }
 

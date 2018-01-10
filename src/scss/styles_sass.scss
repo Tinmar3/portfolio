@@ -54,10 +54,8 @@ body {
     z-index: -1;
 }
 
-.button-1 {
-    background-color: $main-color;
-    border-radius: 5px;
-    padding: 4px 10px;
+.undisplayed {
+    display: none;
 }
 
 main {
@@ -69,13 +67,15 @@ input,
 textarea {
     background-color: transparent;
     outline: none;
-    border: 2px solid $secondary-color;
+    border: 1px solid $secondary-color;
     padding: 6px 10px;
     border-radius: 3px;
     display: block;
     color: $neutral-color;
     margin-bottom: 10px;
     font-size: 16px;
+    background: $main-color;
+    font-family: $font-default;
     @include placehold {
         color: $neutral-color;
         font-family: $font-default;
@@ -94,6 +94,8 @@ textarea {
 }
 
 // imports for override START
+@import 'components/button_1';
+@import 'components/button_2';
 @import 'pages/projects';
 @import 'pages/about_me';
 @import 'pages/contact';

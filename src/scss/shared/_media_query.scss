@@ -23,6 +23,10 @@
     .text-container {
         padding: 0 10px;
         width: 75%;
+        &.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 

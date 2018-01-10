@@ -59,9 +59,15 @@ h3 {
 }
 
 .big-text,
-.medium-text {
+.medium-text,
+.medium-text-special {
     .special {
         color: $neutral-color;
+    }
+    &.center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -128,8 +134,8 @@ h3 {
         color: $neutral-color;
         line-height: 130%;
         width: 700px;
-        font-size: 21px;
-        margin-bottom: 60px;
+        font-size: 20px;
+        margin-bottom: 20px;
     }
 }
 

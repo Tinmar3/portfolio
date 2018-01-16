@@ -17,3 +17,6 @@ $project-6-color: #FF0009; // duadvisor
 
 
 $neutral-color: #93a4aa;
+$neutral-color-darker: darken($neutral-color, 25);
+$neutral-color-brighter: lighten($neutral-color, 20);
+$neutral-color-brightest: lighten($neutral-color, 30);

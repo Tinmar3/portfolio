@@ -7,9 +7,9 @@ var delayedAction, projectsItems, aboutMeCustomOnScroll;
 DomReady.ready(() => {
 
     delayedAction = modDelayedAction();
-    aboutMeCustomOnScroll = modAboutMeCustomOnScroll();
+    // aboutMeCustomOnScroll = modAboutMeCustomOnScroll();
 
-    aboutMeCustomOnScroll.initCustomScroll();
+    // aboutMeCustomOnScroll.initCustomScroll();
 
     function reinitialize() {
     }

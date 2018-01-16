@@ -31,7 +31,8 @@
         .technologies {
             position: absolute;
             width: 360px;
-            right: -364px;
+            top: 49px;
+            right: -111px;
             padding-top: 120px;
             img {
                 @include transition(0.2, linear);
@@ -39,22 +40,32 @@
                 display: block;
                 margin-top: 30px;
                 filter: grayscale(100%);
-                opacity: 0.2;
+                opacity: 0.085;
+                position: absolute;
                 &.trio {
-                    width: 130px;
+                    width: 280px;
+                    position: relative;
                 }
                 &.sass {
                     margin-top: 30px;
                     width: 80px;
+                    left: 109px;
+                    bottom: -131px;
                 }
                 &.react {
                     width: 135px;
+                    bottom: -76px;
+                    left: 217px;
                 }
                 &.jquery {
                     width: 105px;
+                    bottom: 11px;
+                    left: 286px;
                 }
                 &.webpack {
                     width: 130px;
+                    bottom: 91px;
+                    left: 319px;
                 }
             }
         }

@@ -28,6 +28,18 @@
     }
 }
 
+.brighter {
+    color: $neutral-color-brighter;
+}
+
+.brightest {
+    color: $neutral-color-brightest;
+}
+
+.darker {
+    color: $neutral-color-darker;
+}
+
 .link {
     color: $secondary-color;
     font-size: 16px;

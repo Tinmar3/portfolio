@@ -30,6 +30,14 @@ $grid-width-half: 470px;
     transition: $property $time+s $type;
 }
 
+@mixin transitionFree($prop) {
+    -webkit-transition: $prop;
+    -moz-transition: $prop;
+    -ms-transition: $prop;
+    -o-transition: $prop;
+    transition: $prop;
+}
+
 @mixin rotate($degree) {
     -webkit-transform: rotate($degree+deg);
     -moz-transform: rotate($degree+deg);

@@ -76,16 +76,13 @@ textarea {
     font-size: 16px;
     background: $main-color;
     font-family: $font-default;
+    width: 80vw;
     @include placehold {
         color: $neutral-color-darker;
         font-family: $font-default;
-        font-size: 16px;
+        font-size: 14px;
     }
     ;
-}
-
-input {
-    float: left;
 }
 
 textarea {
@@ -96,6 +93,7 @@ textarea {
 // imports for override START
 @import 'components/button_1';
 @import 'components/button_2';
+@import 'pages/home';
 @import 'pages/projects';
 @import 'pages/about_me';
 @import 'pages/contact';

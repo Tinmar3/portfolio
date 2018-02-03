@@ -6,29 +6,73 @@
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
     <meta charset="UTF-8">
 
-    <title>Martin Angjic</title>
+    <title>Front-End Developer | Martin Angjic</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/png" href="./src/images/main_logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="./src/images/main_logo.png" />
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto:400,400i,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700|Open+Sans:400,400i,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="dist/styles_sass.css">
 
 </head>
 
-<body class="home">
-
-    <div class="easy-overlay"></div>
+<body id="home-page" class="home">
 
     <header>
-        
+        <div class="grid center header-wrapper">
+            <a href="/">
+                <div class="logo main">MA</div>
+            </a>
+            <div class="menu-content">
+                <nav>
+                    <ul class="navigation-list">
+                        <li class="navigation-item">
+                            <a class="link navigation-link" href="/projects.html">PROJECTS</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a class="link navigation-link" href="/about-me.html">ABOUT ME</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a class="link navigation-link" href="/contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile-menu-icon-wrapper">
+                <a class="mobile-menu-icon">
+                    <div class="mobile-menu-line"></div>
+                    <div class="mobile-menu-line"></div>
+                    <div class="mobile-menu-line"></div>
+                </a>
+            </div>
+        </div>
     </header>
 
     <main>
-
+        <div class="easy-overlay"></div>
+        <div class="teaser">
+            <div class="teaser-picture" style="background-image: url('/src/images/1_Hu3vQJOIihS2IKbyjgnhFg.png')"></div>
+            <div class="grid center teaser-text-wrapper">
+                <div class="image-web-template-wrapper">
+                    <object class="web-template-image" data="/src/images/web_template.svg" type="image/svg+xml"></object>
+                </div>
+                <div class="teaser-overlay"></div>
+                <div class="teaser-text">
+                    <h1 class="main-title">Hi, I'm Martin. I develop 
+                        <span class="dynamical active">web pages.</span>
+                        <span class="dynamical">in VanillaJS way.</span>
+                        <span class="dynamical">ReactJS.</span>
+                        <span class="dynamical">responsively.</span>
+                        <span class="dynamical">with SCSS.</span>
+                        <span class="dynamical">web applications.</span>
+                        <span class="dynamical">quality HTML/CSS slices from design.</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <footer></footer>
     <script src="dist/bundle.js"></script>
 </body>

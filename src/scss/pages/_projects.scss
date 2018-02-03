@@ -215,6 +215,7 @@
                     width: 85%;
                 }
                 & .project-button-container {
+                    transition-delay: 0.5s;
                     opacity: 1;
                     visibility: visible;
                     pointer-events: all;
@@ -234,7 +235,9 @@
             margin-bottom: 12px;
         }
         .project-button-container {
-            @include transition(0.3, ease-in);
+            // transition-delay: 0.9s;
+            // @include transition(0.3, ease-in);
+            @include transitionFree(unquote("opacity 0.3s ease-in-out 0s, visibility 0.3s ease-in-out 0s"));
             @include flex-center-horizontal();
             top: 93%;
             top: calc(100% - 31px);

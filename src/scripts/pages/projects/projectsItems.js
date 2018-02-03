@@ -7,7 +7,7 @@ export function modProjectsItems() {
     projectItems.forEach((thisItem) => {
         var allMyChildren = thisItem.querySelectorAll('*');
         allMyChildren.forEach((thisItem) => {
-            thisItem.stop
+            // thisItem.stop
         });
     });
 

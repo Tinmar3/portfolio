@@ -12,15 +12,20 @@ DomReady.ready(() => {
     delayedAction = modDelayedAction();
     pages = pageCheck();
     header = modHeader();
-    footer = modFooter();
 
     header.initHeader();
-    footer.initFooter();
+
+    if (!pages.home) {
+        footer = modFooter();
+        footer.initFooter();
+    }
 
     if (pages.projects) {
         require('./pages/projects/projectsPage.js');
     } else if (pages.aboutMe) {
         require('./pages/aboutMe/aboutMePage.js');
+    } else if (pages.home) {
+        require('./pages/home/homePage.js');
     }
 
     function reinitialize() {

@@ -68,6 +68,9 @@ h3 {
     &.about-me {
         margin-bottom: 40px;
     }
+    &.contact {
+        margin-bottom: 30px;
+    }
 }
 
 .big-text,
@@ -102,12 +105,19 @@ h3 {
     line-height: 130%;
 }
 
+h1 {
+    
+}
+
 // mobile first
 @media (min-width: 450px) {}
 
 @media (min-width: 768px) {}
 
 @media (min-width: 992px) {
+    h1 {
+        font-size: 48px;
+    }
     .text {
         font-size: 17px;
         margin-bottom: 12px;
@@ -129,7 +139,8 @@ h3 {
     }
     .medium-text {
         font-size: 28px;
-        &.projects, &.contact {
+        &.projects,
+        &.contact {
             width: 700px;
         }
         &.center {
@@ -138,9 +149,7 @@ h3 {
         &.about-me {
             margin-bottom: 25px;
         }
-        &.contact {
-
-        }
+        &.contact {}
     }
     .medium-text-special {
         color: $neutral-color;

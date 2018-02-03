@@ -5,8 +5,8 @@ export function pageCheck() {
         pages['projects'] = true;
     } else if (document.getElementById('about-me-page')) {
         pages['aboutMe'] = true;
-    } else if (document.getElementById('region-select')) {
-        pages['regionSelector'] = true;
+    } else if (document.getElementById('home-page')) {
+        pages['home'] = true;
     } else if (document.getElementById('brands')) {
         pages['brands'] = true;
     } else if (document.getElementById('news')) {

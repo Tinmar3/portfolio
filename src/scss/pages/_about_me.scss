@@ -3,7 +3,7 @@
         display: none;
     }
     .contact-me {
-        margin-top: 70px;
+        margin-top: 78px;
         font-size: 24px;
         margin-bottom: 50px;
     }
@@ -17,7 +17,7 @@
 @media (min-width: 992px) {
     .about-me {
         .technologies-container {
-            display: block;
+            display: none;
             position: fixed;
             width: 100vw;
             height: 100vh;
@@ -36,7 +36,7 @@
                 display: block;
                 margin-top: 30px;
                 filter: grayscale(100%);
-                opacity: 0.085;
+                opacity: 0.115;
                 position: absolute;
                 &.trio {
                     width: 333px;
@@ -63,6 +63,32 @@
                     bottom: -165px;
                     left: 64px;
                 }
+            }
+        }
+        .technologies-in-text {
+            @include flex();
+            align-items: flex-end;
+            overflow: hidden;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .technologies-image {
+            @include transition(0.5, ease-in-out);
+            height: 40px;
+            float: left;
+            margin-right: 20px;
+            filter: grayscale(85%);
+            &.trio {
+                height: 100px;
+            }
+            &.sass {
+                height: 50px;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                filter: grayscale(0%);
             }
         }
     }

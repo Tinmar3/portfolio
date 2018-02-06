@@ -69,8 +69,8 @@ body {
     -o-filter: grayscale(80%) blur(1px);
     -ms-filter:grayscale(80%) blur(1px);
     filter: grayscale(80%) blur(1px);
-    opacity: 0.07;
-    .strong {
+    opacity: 0.1;
+    &.strong {
         opacity: 0.2;
     }
 }

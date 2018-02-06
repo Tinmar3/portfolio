@@ -109,7 +109,8 @@ input, select {
   color: #93a4aa;
   font-size: 16px;
   line-height: 145%;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  clear: both; }
 
 .secondary-text {
   font-family: "Open Sans", sans-serif;
@@ -195,24 +196,27 @@ h3 {
     font-size: 17px;
     margin-bottom: 12px; }
   .big-text {
-    font-size: 40px;
+    font-size: 50px;
     line-height: 1.3; }
     .big-text.projects {
       width: 700px;
       margin-bottom: 15px; }
     .big-text.about-me {
-      margin-bottom: 40px; }
+      margin-bottom: 60px; }
     .big-text.contact {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       width: 700px; }
   .medium-text {
     font-size: 28px; }
+    .medium-text.in-text {
+      margin: 25px 0 13px 0;
+      font-size: 21px; }
     .medium-text.projects, .medium-text.contact {
       width: 700px; }
     .medium-text.center {
       width: auto; }
     .medium-text.about-me {
-      margin-bottom: 25px; }
+      margin-bottom: 32px; }
   .medium-text-special {
     color: #93a4aa;
     line-height: 130%;
@@ -612,8 +616,8 @@ body {
   -o-filter: grayscale(80%) blur(1px);
   -ms-filter: grayscale(80%) blur(1px);
   filter: grayscale(80%) blur(1px);
-  opacity: 0.07; }
-  .bg-picture .strong {
+  opacity: 0.1; }
+  .bg-picture.strong {
     opacity: 0.2; }
 
 .undisplayed {
@@ -800,7 +804,7 @@ textarea {
 .project-desktop-image {
   width: 100%;
   height: 100%;
-  border-radius: 4px; }
+  border-radius: 2px; }
 
 .projects .project-mobile-image {
   pointer-events: none;
@@ -856,7 +860,7 @@ textarea {
     width: 100%;
     height: 100%;
     background-color: rgba(8, 19, 64, 0.3);
-    border-radius: 4px;
+    border-radius: 2px;
     pointer-events: none; }
     .mobile-image-container .project-image-overlay {
       width: 27%;
@@ -1008,7 +1012,7 @@ textarea {
     z-index: -1; }
   .projects .responsive-image {
     width: 784px;
-    opacity: 0.085;
+    opacity: 0.115;
     filter: grayscale(100%);
     float: right;
     margin-top: 95px;
@@ -1018,13 +1022,13 @@ textarea {
   display: none; }
 
 .about-me .contact-me {
-  margin-top: 70px;
+  margin-top: 78px;
   font-size: 24px;
   margin-bottom: 50px; }
 
 @media (min-width: 992px) {
   .about-me .technologies-container {
-    display: block;
+    display: none;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -1046,7 +1050,7 @@ textarea {
       display: block;
       margin-top: 30px;
       filter: grayscale(100%);
-      opacity: 0.085;
+      opacity: 0.115;
       position: absolute; }
       .about-me .technologies img.trio {
         width: 333px;
@@ -1067,7 +1071,38 @@ textarea {
       .about-me .technologies img.webpack {
         width: 130px;
         bottom: -165px;
-        left: 64px; } }
+        left: 64px; }
+  .about-me .technologies-in-text {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    align-items: flex-end;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 30px; }
+  .about-me .technologies-image {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    height: 40px;
+    float: left;
+    margin-right: 20px;
+    filter: grayscale(85%); }
+    .about-me .technologies-image.trio {
+      height: 100px; }
+    .about-me .technologies-image.sass {
+      height: 50px; }
+    .about-me .technologies-image:last-child {
+      margin-right: 0; }
+    .about-me .technologies-image:hover {
+      filter: grayscale(0%); } }
 
 .contact .form-container {
   display: -webkit-box;

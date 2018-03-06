@@ -37,7 +37,7 @@ header {
         text-align: center;
         font-weight: 600;
     }
-    .logo.main {
+    @at-root .logo.main {
         color: $secondary-color;
         font-size: 40px;
     }

@@ -21,6 +21,10 @@
 
 <body id="home-page" class="home">
 
+    <div class="loader">
+        <div class="logo main animate-loader">MA</div>
+    </div>
+
     <header>
         <div class="grid center header-wrapper">
             <a href="/">
@@ -57,12 +61,8 @@
         <div class="easy-overlay"></div>
         <div class="teaser">
             <div class="grid center teaser-text-wrapper">
-                <div class="image-web-template-wrapper">
-                    <object class="web-template-image" data="/src/images/web_template.svg" type="image/svg+xml"></object>
-                </div>
-                <div class="teaser-overlay"></div>
                 <div class="teaser-text">
-                    <h1 class="main-title">Hi, I'm Martin. I develop 
+                    <h1 class="main-title">Hi, I'm Martin. I develop
                         <span class="dynamical active">web pages.</span>
                         <span class="dynamical">in VanillaJS way.</span>
                         <span class="dynamical">ReactJS.</span>
@@ -75,5 +75,10 @@
             </div>
         </div>
     </main>
+    <script>
+        if (localStorage.getItem("firstTimeLoading")) {
+            document.body.classList.add('loading-done');
+        }
+    </script>
     <script src="dist/bundle.js"></script>
 </body>

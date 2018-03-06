@@ -5,6 +5,13 @@
     line-height: 145%;
     margin-bottom: 10px;
     clear: both;
+    &.note {
+        font-size: 14px;
+        text-align: center;
+    }
+    &.note-contact {
+        margin-top: 20px;
+    }
 }
 
 .secondary-text {
@@ -62,12 +69,12 @@ h3 {
 
 .big-text {
     font-weight: 700;
-    font-size: 23px;
+    font-size: 29px;
     &.projects {
         margin-bottom: 10px;
     }
     &.about-me {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
     }
     &.contact {
         margin-bottom: 30px;
@@ -89,6 +96,8 @@ h3 {
 
 .medium-text {
     font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
     &.projects {
         margin-bottom: 40px;
     }
@@ -98,12 +107,17 @@ h3 {
     &.about-me {
         margin-bottom: 25px;
     }
+    &.in-text {
+        margin: 18px 0 7px 0;
+        font-size: 21px;
+    }
 }
 
 .medium-text-special {
     font-weight: 500;
     color: $neutral-color;
     line-height: 130%;
+    font-size: 18px;
 }
 
 h1 {}
@@ -120,6 +134,9 @@ h1 {}
     .text {
         font-size: 17px;
         margin-bottom: 12px;
+        &.note-contact {
+            margin-top: 30px;
+        }
     }
     .big-text {
         font-size: 50px;

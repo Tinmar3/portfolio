@@ -76,6 +76,7 @@
                 <a class="button-2 contact center">
                         <span class="button-2-text">SUBMIT YOUR ENQUIRY</span>
                 </a>
+                <p class="note text note-contact">* Required</p>
             </form>
         </div>
 
@@ -91,5 +92,10 @@
             </div>
         </div>
     </footer>
+    <script>
+        if (localStorage.getItem("firstTimeLoading")) {
+            document.body.classList.add('loading-done');
+        }
+    </script>
     <script src="dist/bundle.js"></script>
 </body>

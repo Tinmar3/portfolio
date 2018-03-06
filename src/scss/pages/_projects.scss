@@ -38,6 +38,9 @@
         font-weight: 600;
         color: $secondary-color;
         margin-bottom: 5px;
+        .special {
+            color: $neutral-color;
+        }
     }
     .project-items {
         margin-bottom: 30px;

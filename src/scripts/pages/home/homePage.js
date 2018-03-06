@@ -1,5 +1,5 @@
 require('../../external/domready');
-import { pageCheck, modDelayedAction } from '../../shared/utils.js';
+import { modDelayedAction } from '../../shared/utils.js';
 import { modHometitle } from './homeTitle.js';
 
 var delayedAction, projectsItems, homeTitle;

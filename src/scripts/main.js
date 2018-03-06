@@ -45,5 +45,12 @@ DomReady.ready(() => {
 
 });
 
-// window.onload = () => {
-// }
+// var isLoaded;
+// var loadingCheckInterval = setTimeout(() => {
+
+// }, 1000);
+
+window.onload = () => {
+    document.body.classList.add('loading-done');
+    localStorage.setItem("firstTimeLoading", false);
+}

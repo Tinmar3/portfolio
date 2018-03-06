@@ -1,8 +1,8 @@
 .home {
     .teaser {
-        margin-top: 81px;
+        margin-top: 61px;
         height: 88vh;
-        height: calc(100vh - 81px);
+        height: calc(100vh - 61px);
         position: relative;
     }
     .web-template-image {
@@ -44,6 +44,13 @@
 
 @media (min-width: 768px) {}
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    .home {
+        .teaser {
+            margin-top: 81px;
+            height: calc(100vh - 81px);
+        }
+    }
+}
 
 @media (min-width: 1200px) {}

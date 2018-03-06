@@ -27,6 +27,10 @@
 
 <body id="projects-page" class="projects">
 
+    <div class="loader">
+        <div class="logo main animate-loader">MA</div>
+    </div>
+
     <header>
         <div class="grid center header-wrapper">
             <a href="/">
@@ -61,14 +65,14 @@
 
     <main class="grid center">
         <div class="easy-overlay"></div>
-        
+
         <div class="responsive-container">
             <div class="grid center">
                 <img class="responsive-image" src="./src/images/responsive-article.svg" />
             </div>
         </div>
         <div class="projects-text">
-            <h2 class="big-text projects center">Most of my <span class="brighter">projects</span> consist of classic HTML/CSS/JS structure...</h2> 
+            <h2 class="big-text projects center">Most of my <span class="brighter">projects</span> consist of classic HTML/CSS/JS structure...</h2>
             <h3 class="medium-text projects center">...but some of them needed extra piece of <span class="brighter">magic.</span></h3>
         </div>
         <div class="project-items">
@@ -84,7 +88,7 @@
                     </div>
                 </div>
                 <div class="project-item-text">
-                    <h4 class="project-brand">Salvus health</h4>
+                    <h4 class="project-brand">Salvus health<span class="special"> *</span></h4>
                     <!-- <div class="arrow-button">
                         <div class="arrow-button-outer">
                             <div class="arrow-button-inner">
@@ -94,10 +98,10 @@
                     </div> -->
                     <p class="neutral-text project-text">
                         Big medicine selling company. Goal was to create friendly and <em>warm</em> web page from design,
-                        with lot of animations. Page has custom advanced scrolling by sections in <span class="brighter">home</span>                        page, advanced menu in <span class="brighter">about us</span> page and is gorgeous all around.
-                        In the end it’s made <em>Vanilla (JS)</em>, with the help of Webpack and some smaller libraries like
-                        <span class="brighter">zenscroll</span>. SCSS handled CSS's mess. Best web page I've made 'till
-                        this day, design complexity and code cleanliness wise.
+                        with lot of animations. Page has custom advanced scrolling by sections in <span class="brighter">home</span>                        page, advanced menu in <span class="brighter">about us</span> page and is gorgeous all around. In
+                        the end it’s made <em>Vanilla (JS)</em>, with the help of Webpack and some smaller libraries like
+                        <span class="brighter">zenscroll</span>. SCSS handled CSS's mess. Best web page I've made 'till this
+                        day, design complexity and code cleanliness wise.
                     </p>
                 </div>
                 <div class="project-button-container">
@@ -119,8 +123,8 @@
                 <div class="project-item-text">
                     <h4 class="project-brand">DuAdvisor</h4>
                     <p class="neutral-text project-text">
-                        Like its name says, this app serves for advising and informing purposes for the City of Dubrovnik. I created <em>slice</em>                        from design with the help of <span class="brighter">JQuery</span>. It has a lot of subpages and
-                        many different components, like any other advanced application. Later, back-end dev of this app implemented
+                        Like its name says, this app serves for advising and informing purposes for the City of Dubrovnik. I created <em>slice</em>                        from design with the help of <span class="brighter">JQuery</span>. It has a lot of subpages and many
+                        different components, like any other advanced application. Later, back-end dev of this app implemented
                         AngularJS and CMS.
                     </p>
                 </div>
@@ -143,7 +147,7 @@
                     </div>
                 </div>
                 <div class="project-item-text">
-                    <h4 class="project-brand">JBC</h4>
+                    <h4 class="project-brand">JBC<span class="special"> *</span></h4>
                     <p class="neutral-text project-text">
                         The oil and gas market's research center. They needed an application for handling big amount of data of their reports, news,
                         company informations and so on, for every user of the app. The best solution was to implement
@@ -174,8 +178,8 @@
                     <p class="neutral-text project-text">
                         Smart sensors development company. Their web page is really simple, except it has custom scrolling by full page sections
                         – and that’s why I've used
-                        <span class="brighter">fullPage.js</span> JQuery library. One of the first web pages I’ve ever
-                        made from scratch.
+                        <span class="brighter">fullPage.js</span> JQuery library. One of the first web pages I’ve ever made
+                        from scratch.
                     </p>
                 </div>
                 <div class="project-button-container">
@@ -230,7 +234,7 @@
                     </p>
                 </div>
                 <div class="project-button-container">
-                    <a href="http://magdalena.zeraxo.com/" target="_blank" class="button-1 project-item-visit-page">
+                    <a href="http://magdalena.hr/" target="_blank" class="button-1 project-item-visit-page">
                             <span class="button-1-text">VISIT PAGE</span>
                             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                         </a>
@@ -238,7 +242,8 @@
             </div>
         </div>
         <div class="projects-text">
-            <p class="medium-text projects center">Liked my porftolio page? Check its code on <a href="https://github.com/Tinmar3/portfolio" target="_blank" class="special link-in-text">GitHub!</a></p>
+            <p class="medium-text projects center">Liked my porftolio page? Check its code on <a href="https://github.com/Tinmar3/portfolio" target="_blank" class="special link-in-text">GitHub!</a>
+            </br><span class="note text">* Some of projects are not in production yet and are deployed on test domain.</span></p>
         </div>
     </main>
 
@@ -252,5 +257,10 @@
             </div>
         </div>
     </footer>
+    <script>
+        if (localStorage.getItem("firstTimeLoading")) {
+            document.body.classList.add('loading-done');
+        }
+    </script>
     <script src="dist/bundle.js"></script>
 </body>

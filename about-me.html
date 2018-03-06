@@ -27,6 +27,10 @@
 
 <body id="about-me-page" class="about-me">
 
+    <div class="loader">
+        <div class="logo main animate-loader">MA</div>
+    </div>
+
     <header>
         <div class="grid center header-wrapper">
             <a href="/">
@@ -60,17 +64,6 @@
     <div class="bg-picture" style="background-image: url('/src/images/1_Hu3vQJOIihS2IKbyjgnhFg.png')"></div>
 
     <main class="grid center">
-        <div class="technologies-container">
-            <div class="grid center">
-                <div class="technologies">
-                    <img class="technologies-image sass" src="./src/images/sass.svg" />
-                    <img class="technologies-image react" src="./src/images/react.svg" />
-                    <img class="technologies-image jquery" src="./src/images/jquery.svg" />
-                    <img class="technologies-image webpack" src="./src/images/webpack.png" />
-                    <img class="technologies-image trio" src="./src/images/web-trifecta.png" />
-                </div>
-            </div>
-        </div>
         <div class="easy-overlay"></div>
         <h2 class="big-text about-me center">Just a little bit <span class="brighter">about me...</span></h2>
 
@@ -82,7 +75,8 @@
                 creating web pages and apps under my belt.</p>
             <p class="text">First of all, I consider myself a really good professional. Of course, I don’t mind having friends and good company
                 at work, but professionalism should be number one.</p>
-            <h3 class="medium-text in-text">Design <i>slicing</i></a></h3>
+            <h3 class="medium-text in-text">Design <i>slicing</i></a>
+            </h3>
             <p class="text">My strongest weapon is creating front-end from mockup designs (aka <span class="brighter">PSD-to-HTML/slicing</span>),
                 but I don’t hesitate creating designs myself (like this page you are looking at), or cooperate with UI/UX
                 designer in creating. I'm very good at <span class="brighter">CSS(3)</span> and I am using JS only for more
@@ -91,11 +85,11 @@
             </p>
             <p class="text"><span class="highlighted">I like clean-cut and tenable code.</span> To name everything with the right name and
                 sort it in as many files as necessary. That’s why I like to use <span class="brighter">SCSS</span> and
-                <span
-                    class="brighter">Webpack</span>. My colleagues know that if they want me in a good mood, inline element CSS code is not an
-                    option…
+                <span class="brighter">Webpack</span>. My colleagues know that if they want me in a good mood, inline element
+                CSS code is not an option…
             </p>
-            <h3 class="medium-text in-text">JavaScript development</a></h3>
+            <h3 class="medium-text in-text">JavaScript development</a>
+            </h3>
             <p class="text">Developing way which I enjoy the most is <span class="brighter"><em>Vanilla (JS)</em></span> (with the help of
                 Webpack, Babel and some light libraries), or in <span class="brighter">ReactJS</span>, depending on the project
                 needs. I think external libraries should be used only if you really need them – eg. if I need simple modal
@@ -117,7 +111,8 @@
             <p class="text"><span class="highlighted">My next move?</span> To learn SVG and master it, and to start building projects with
                 CSS Grid.
             </p>
-            <h3 class="medium-text in-text">P.S.</a></h3>
+            <h3 class="medium-text in-text">P.S.</a>
+            </h3>
             <p class="text">At the end of the day, <span class="highlighted">web and its appearance are my passion</span>. I love beautiful
                 web pages, cool animations and smooth transitions. Neat and wonderful pages, with clean-cut and wonderful
                 code, make me one really happy developer.
@@ -141,5 +136,10 @@
             </div>
         </div>
     </footer>
+    <script>
+        if (localStorage.getItem("firstTimeLoading")) {
+            document.body.classList.add('loading-done');
+        }
+    </script>
     <script src="dist/bundle.js"></script>
 </body>

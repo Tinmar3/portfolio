@@ -446,8 +446,15 @@ DomReady.ready(function () {
     });
 });
 
-// window.onload = () => {
-// }
+// var isLoaded;
+// var loadingCheckInterval = setTimeout(() => {
+
+// }, 1000);
+
+window.onload = function () {
+    document.body.classList.add('loading-done');
+    localStorage.setItem("firstTimeLoading", false);
+};
 
 /***/ }),
 /* 3 */
@@ -533,7 +540,7 @@ function modHeader() {
 
                     if (st > lastScrollTop) {
                         // downscroll code
-                        if (st > 180 && !header.classList.contains('hidden')) {
+                        if (st > 90 && !header.classList.contains('hidden')) {
                             header.classList.add('hidden');
                         }
                     } else {

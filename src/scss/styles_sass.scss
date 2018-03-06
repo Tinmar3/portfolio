@@ -61,6 +61,7 @@ body {
     left: 0;
     top: 0;
     background-size: 100% auto;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -2;
@@ -82,6 +83,9 @@ body {
 main {
     padding-top: 95px;
     padding-bottom: 10px;
+    .home & {
+        padding: 0;
+    }
 }
 
 input,
@@ -114,6 +118,7 @@ textarea {
 // imports for override START
 @import 'components/button_1';
 @import 'components/button_2';
+@import 'components/loader';
 @import 'pages/home';
 @import 'pages/projects';
 @import 'pages/about_me';
